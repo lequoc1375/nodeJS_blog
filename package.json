@@ -24,12 +24,24 @@
   },
   "homepage": "https://github.com/lequoc1375/nodeJS_blog#readme",
   "description": "",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.ts": "eslint --fix",
+    "*.json": "prettier --write"
+  },
   "dependencies": {
     "bootstrap": "^5.3.3",
     "express": "^4.21.2",
-    "express-handlebars": "^8.0.1"
+    "express-handlebars": "^8.0.1",
+    "husky": "^9.1.7"
   },
   "devDependencies": {
+    "lint-staged": "^15.4.3",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.9",
     "sass": "^1.84.0"
