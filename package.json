@@ -1,0 +1,37 @@
+{
+  "name": "blog_learning",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon --inspect src/index.js",
+    "watch": "sass src/resources/scss:src/public/css  --watch ",
+    "scss": "sass --watch scss/main.scss public/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lequoc1375/nodeJS_blog.git"
+  },
+  "keywords": [
+    "nodejs",
+    "f8",
+    "learning"
+  ],
+  "author": "quoc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lequoc1375/nodeJS_blog/issues"
+  },
+  "homepage": "https://github.com/lequoc1375/nodeJS_blog#readme",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.1"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.9",
+    "sass": "^1.84.0"
+  }
+}
