@@ -32,14 +32,10 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
+      "prettier --write",
+      "eslint --fix"
     ],
-    "**/*.{css,scss}": [
-      "stylelint --fix",
-      "prettier --write"
-    ],
-    "**/*.{json,md}": [
+    "**/*.{json,md,css,scss}": [
       "prettier --write"
     ]
   },
