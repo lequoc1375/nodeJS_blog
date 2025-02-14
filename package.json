@@ -26,13 +26,21 @@
   "description": "",
   "husky": {
     "hooks": {
-      "pre-commit": "npm test"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.js": "eslint --fix",
-    "*.ts": "eslint --fix",
-    "*.json": "prettier --write"
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "**/*.{css,scss}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "**/*.{json,md}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
@@ -41,9 +49,12 @@
     "husky": "^9.1.7"
   },
   "devDependencies": {
+    "eslint": "^9.20.1",
     "lint-staged": "^15.4.3",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.9",
-    "sass": "^1.84.0"
+    "prettier": "^3.5.1",
+    "sass": "^1.84.0",
+    "stylelint": "^16.14.1"
   }
 }
